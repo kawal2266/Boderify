@@ -1,0 +1,18 @@
+{
+  "manifest_version":2,
+  //Manifest version 1 was deprecated in Chrome 18, and support will be
+  //phased out according to the following schedule.
+  "name":"boderify",
+  "version":"1.1.1",
+  "description":"first addon",
+  "icons":{
+    "64":"nasa.jpg" //64 is the px size
+  },
+  "content_scripts": [
+    {
+     // "matches":["*://*.mozilla.org/*"], //regex this js file runs only when url  matches the given regex
+      "matches":["<all_urls>"],
+      "js": ["boderify.js"] //this is array of js files
+    }
+  ]
+}
